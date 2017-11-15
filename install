@@ -4,11 +4,110 @@
 # ////////////////////////////////////////////////////////////////////////////////
 # ================================================================================
 source="`curl -s https://raw.githubusercontent.com/theraw/source/master/source`"
-sourceUser="dopehosting"
+sourceUser="DopeCloud"
 Project="Cloud-WebServer"
 export SOURCE=$source
 export SOURCEUSER=$sourceUser
 export PROJECT=$Project
+export STATIC_IP='123.1.2.3'
+# ================================================================================
+# ////////////////////////////////////////////////////////////////////////////////
+# ================================================================================
+
+
+# ================================================================================
+# ////////////////////////////////////////////////////////////////////////////////
+# ================================================================================
+REQ() {
+           apt-get update; apt-get upgrade -y; apt-get dist-upgrade -y
+           apt-get autoremove -y
+           apt-get install apt-utils build-essential -y
+           apt-get install git -y
+           apt-get install checkinstall libpcre3 libpcre3-dev zlib1g zlib1g-dbg libxml2 zlib1g-dev -y
+           apt-get install -y unzip
+           apt-get install -y libicu-dev libcurl4-gnutls-dev libtool
+           apt-get install -y libmozjs-24-dev
+           apt-get install -y libmozjs-24-bin; sudo ln -sf /usr/bin/js24 /usr/bin/js
+           apt-get install openssl libssl-dev libperl-dev libexpat-dev -y
+           apt-get install mercurial meld -y
+           apt-get install libxslt-dev -y
+           apt-get install libgd2-xpm -y
+           apt-get install libgd2-xpm-dev -y
+           apt-get install libgeoip-dev -y
+           apt-get install libssl libssl-dev -y
+           apt-get install dh-autoreconf -y
+           apt-get install -y software-properties-common
+           apt-get install -y python-software-properties
+           apt-get install -y libcairo2 libcairo2-dev
+           apt-get install -y python-dev
+           sudo add-apt-repository ppa:maxmind/ppa -y
+           apt-get install aptitude -y
+           aptitude update -y
+           aptitude upgrade -y
+           aptitude install libmaxminddb0 libmaxminddb-dev mmdb-bin -y
+           apt-get install libmysqlclient-dev -y
+           apt-get install libmariadbclient-dev -y
+           apt-get install g++ flex bison curl doxygen libyajl-dev libgeoip-dev libtool dh-autoreconf libcurl4-gnutls-dev libxml2 libpcre++-dev libxml2-dev -y
+}
+# ================================================================================
+# ////////////////////////////////////////////////////////////////////////////////
+# ================================================================================
+
+
+# ================================================================================
+# ////////////////////////////////////////////////////////////////////////////////
+# ================================================================================
+IPHP() {
+           apt-get install software-properties-common -y
+           apt-get install python-software-properties -y
+           sudo add-apt-repository ppa:ondrej/php -y
+           apt-get update; apt-get upgrade -y
+           sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 4F4EA0AAE5267A6C
+           apt-get update; apt-get upgrade -y
+
+           apt-get -y install php5.6 php5.6-common
+           apt-get -y install php5.6-fpm
+           apt-get -y install php5.6-cgi php5.6-cli php5.6-dev php5.6-curl php5.6-gd php5.6-imap
+           apt-get -y install php5.6-intl php5.6-ldap php5.6-mysql php5.6-pgsql php5.6-recode php5.6-tidy 
+           apt-get -y install php5.6-json php5.6-bz2 php5.6-mcrypt php5.6-readline php5.6-interbase php5.6-xmlrpc 
+           apt-get -y install php5.6-gmp php5.6-xsl php5.6-mbstring php5.6-soap php5.6-xml php5.6-zip
+}
+# ================================================================================
+# ////////////////////////////////////////////////////////////////////////////////
+# ================================================================================
+
+
+# ================================================================================
+# ////////////////////////////////////////////////////////////////////////////////
+# ================================================================================
+PHPFIX() {
+           #cd /bin; curl -s -O https://raw.githubusercontent.com/systemroot/raws-dev/master/static/nginx/etc/fpm
+           #chmod +x /bin/fpm; cd /etc/php/5.6/fpm/; rm -Rf php.ini
+           #wget https://raw.githubusercontent.com/systemroot/raws-dev/master/static/nginx/etc/php.ini
+           #cd /etc/php/5.6/fpm/pool.d/; rm -Rf www.conf
+           #wget https://raw.githubusercontent.com/systemroot/raws-dev/master/static/nginx/etc/www.conf
+           #fpm restart
+}
+# ================================================================================
+# ////////////////////////////////////////////////////////////////////////////////
+# ================================================================================
+
+# ================================================================================
+# ////////////////////////////////////////////////////////////////////////////////
+# ================================================================================
+
+# ================================================================================
+# ////////////////////////////////////////////////////////////////////////////////
+# ================================================================================
+
+# ================================================================================
+# ////////////////////////////////////////////////////////////////////////////////
+# ================================================================================
+
+# ================================================================================
+# ////////////////////////////////////////////////////////////////////////////////
+# ================================================================================
+
 # ================================================================================
 # ////////////////////////////////////////////////////////////////////////////////
 # ================================================================================
